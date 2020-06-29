@@ -18,7 +18,7 @@ class SearchPage extends Component {
     return (
 
         <div className="container">
-            <h2>Search for your favorite meme:</h2>
+            <h2>Search for your favorite meme</h2>
           <InstantSearch searchClient={searchClient} indexName="memes">
             <div className="search-panel">
               <div className="search-panel__results">
@@ -48,7 +48,7 @@ function Hit(props) {
         <img className='hit-img' src={props.hit.url} alt={props.hit.name}/>
         <p>{props.hit.name}</p>
         <Link className='editButton' to={`/memes/${props.hit.id}`}>
-            <i class="far fa-edit"></i>
+            <i className="far fa-edit"></i>
         </Link>
     </article>
   );

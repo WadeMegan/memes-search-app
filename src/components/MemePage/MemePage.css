@@ -1,3 +1,8 @@
+.memePageContainer p{
+    padding:0px;
+    margin:0px;
+}
+
 .memeText{
     z-index: 15;
     font-size: 40px;
@@ -6,7 +11,6 @@
     bottom:5%;
     width:100%;
     text-align: center;
-
 }
 
 .imgContainer{
@@ -16,3 +20,46 @@
     display:inline-block;
     position:relative;
 }
+
+form input{
+    width:80%;
+    margin-bottom:10px;
+}
+
+.memePageContainer section{
+    width:100%;
+}
+
+.selected{
+    border:3px solid #19909a !important;
+}
+
+.blackButton{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border:1px solid #19909a;
+    background-color: black;
+    margin-bottom:10px;
+    margin-right:5px;
+}
+
+.whiteButton{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border:1px solid #19909a;
+    background-color: white;
+    margin-bottom:20px;
+}
+
+button:focus{
+    outline:0;
+}
+
+@media(min-width: 700px) {
+    .memePageContainer{
+        display:flex;
+    }
+}
+

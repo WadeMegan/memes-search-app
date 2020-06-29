@@ -5,7 +5,8 @@ class App extends Component {
 
     state={
         meme:null,
-        text:'Cool Meme!'
+        text:'Cool Meme!',
+        color:"black"
     }
 
     componentDidMount(){
@@ -25,15 +26,16 @@ class App extends Component {
         if(this.state.meme){
             let meme=this.state.meme
 
-            /*let myStyle = {
-                background: `url(${meme.url}) no-repeat center center`
-              };*/
+            let textStyle={
+                color: `${this.state.color}`,
+            }
+
             return(
                 <>
-                <h1>{meme.name}</h1>
+                {/*<h1>{meme.name}</h1>*/}
                 <div className='imgContainer' >
                     <img src={meme.url}/>
-                    <p className='memeText'>{this.state.text}</p>
+                    <p className='memeText' style={textStyle}>{this.state.text}</p>
                 </div>
                 </>
 
@@ -43,19 +45,52 @@ class App extends Component {
 
     handleChange=(event)=>{
         this.setState({text: event.target.value});
-        console.log(this.state.text)
+        //console.log(this.state.text)
     }
+
+    handleColorChange=(color)=>{
+        //console.log(event.target.value)
+        this.setState({color: color});
+    }
+
+renderColorButtons=()=>{
+    
+    if(this.state.color==='black'){
+        return(
+        <>
+            <button className='selected blackButton' onClick={()=>this.handleColorChange("black")}></button>
+            <button className='whiteButton' onClick={()=>this.handleColorChange("white")}></button>
+        </>
+        )
+    } else{
+        return(
+            <>
+                <button className='blackButton' onClick={()=>this.handleColorChange("black")}></button>
+                <button onClick={()=>this.handleColorChange("white")} className='selected whiteButton'></button>
+            </>
+            )
+    }
+    
+    
+}
 
   render(){
 
     return(
-        <>
-        <form>
-            <label htmlFor='text'>Your text:</label>
-            <input type='text' name='text' id='text' value={this.state.text} onChange={this.handleChange}/>
-        </form>
-        {this.renderMeme()}
-        </>
+        <div className="container memePageContainer">
+            <section>
+                <h2>Edit your meme</h2>
+                <form>
+                    <label htmlFor='text'>Text:</label><br/>
+                    <input type='text' name='text' id='text' value={this.state.text} onChange={this.handleChange}/>                 
+                </form>
+                <p>Color:</p>
+                {this.renderColorButtons()}
+            </section>
+            <section>
+                {this.renderMeme()}
+            </section>
+        </div>
     )
   }
 }
