@@ -20,7 +20,7 @@ class App extends Component {
         </Switch>
       </main>
       <footer>
-        <p>Created by <a href="https://portfolio.wademegan.now.sh/">Megan Wade</a></p>
+        <p>Created by <a href="https://portfolio.wademegan.now.sh/" target="_blank">Megan Wade</a></p>
         <ul>
           <li><a href="https://www.linkedin.com/in/megan-wade-909129124/" target="_blank" rel="noopener noreferrer" aria-label="linkedin link"><i className="fab fa-linkedin fa-2x"></i></a></li>
           <li><a href="mailto:meganwade96@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email link"><i className="fas fa-envelope-square fa-2x"></i></a></li>

@@ -18,7 +18,7 @@ class SearchPage extends Component {
     return (
 
         <div className="container">
-            <h2>Search for your favorite meme</h2>
+            <h2>Select your favorite meme</h2>
           <InstantSearch searchClient={searchClient} indexName="memes">
             <div className="search-panel">
               <div className="search-panel__results">
