@@ -9,6 +9,8 @@ em {
   
   .ais-Hits-item{
       padding:0px !important;
+      position:relative;
+      padding-bottom:30px !important;
   }
 
   .header {
@@ -66,4 +68,26 @@ em {
     margin: 2rem auto;
     text-align: center;
   }
-  
+
+.ais-Hits-item p{
+    display:block;
+    font-size: 18px;
+    margin:0px;
+    padding:5px;
+    color:black;
+}
+
+.editButton{
+    background-color: #178b97;
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    height:30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editButton i{
+    color:white;
+}

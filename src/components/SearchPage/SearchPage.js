@@ -44,11 +44,11 @@ class SearchPage extends Component {
 
 function Hit(props) {
   return (
-    <article>
+    <article className='memeResult'>
         <img className='hit-img' src={props.hit.url} alt={props.hit.name}/>
         <p>{props.hit.name}</p>
-        <Link to={`/memes/${props.hit.id}`}>
-            Add Text
+        <Link className='editButton' to={`/memes/${props.hit.id}`}>
+            <i class="far fa-edit"></i>
         </Link>
     </article>
   );
