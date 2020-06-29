@@ -5,3 +5,33 @@ nav{
   text-align: center;
   color:white;
 }
+
+footer{
+  height:100px;
+  background-image: linear-gradient(to right,#014f77, #19909a);
+  color:white;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul, footer p{
+  margin:0px;
+  padding:0px;
+}
+
+footer a {
+  color:white;
+}
+
+footer li{
+  display:inline-block;
+  padding-left:3px;
+  padding-right:3px;
+  padding-top:10px;
+}
+
+footer i{
+  color:white;
+}
