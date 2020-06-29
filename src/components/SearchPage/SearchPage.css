@@ -1,19 +1,19 @@
 .hit-img{
-    width:100%;
+    width: 100%;
 }
 
-em {
+em{
     background: cyan;
     font-style: normal;
-  }
+}
   
-  .ais-Hits-item{
-      padding:0px !important;
-      position:relative;
-      padding-bottom:30px !important;
-  }
+.ais-Hits-item{
+    padding: 0px !important;
+    position: relative;
+    padding-bottom: 30px !important;
+}
 
-  .header {
+.header{
     display: flex;
     align-items: center;
     min-height: 50px;
@@ -21,53 +21,53 @@ em {
     background-image: linear-gradient(to right, #8e43e7, #00aeff);
     color: #fff;
     margin-bottom: 1rem;
-  }
+}
   
-  .header a {
+.header a {
     color: #fff;
     text-decoration: none;
-  }
-  
-  .header-title {
+}
+
+.header-title{
     font-size: 1.2rem;
     font-weight: normal;
-  }
-  
-  .header-title::after {
+}
+
+.header-title::after{
     content: ' ▸ ';
     padding: 0 0.5rem;
-  }
-  
-  .header-subtitle {
+}
+
+.header-subtitle{
     font-size: 1.2rem;
-  }
+}
   
-  .container {
+.container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-  }
+}
   
-  .search-panel {
+.search-panel {
     display: flex;
-  }
-  
-  .search-panel__filters {
+}
+
+.search-panel__filters {
     flex: 1;
-  }
-  
-  .search-panel__results {
+}
+
+.search-panel__results {
     flex: 3;
-  }
-  
-  .searchbox {
+}
+
+.searchbox {
     margin-bottom: 2rem;
-  }
-  
-  .pagination {
+}
+
+.pagination {
     margin: 2rem auto;
     text-align: center;
-  }
+}
 
 .ais-Hits-item p{
     display:block;
@@ -79,15 +79,15 @@ em {
 
 .editButton{
     background-color: #178b97;
-    position:absolute;
-    bottom:0px;
-    width:100%;
-    height:30px;
-    display:flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .editButton i{
-    color:white;
+    color: white;
 }

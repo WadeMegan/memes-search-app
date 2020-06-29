@@ -5,7 +5,7 @@ import SearchPage from '../SearchPage/SearchPage'
 import MemePage from '../MemePage/MemePage.js'
 
 
-class App extends Component {
+class App extends Component{
 
   render(){
     return(

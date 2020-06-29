@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './MemePage.css'
 
-class App extends Component {
+class App extends Component{
 
     state={
         meme:null,
@@ -12,7 +12,7 @@ class App extends Component {
     componentDidMount(){
         fetch('https://api.imgflip.com/get_memes')
             .then(response => response.json())
-            .then(data => { //console.log(data)
+            .then(data => { 
                 const meme = data.data.memes.filter(meme=>
                     meme.id===this.props.match.params.id
                 )
@@ -27,12 +27,11 @@ class App extends Component {
             let meme=this.state.meme
 
             let textStyle={
-                color: `${this.state.color}`,
+                color: `${this.state.color}`
             }
 
             return(
                 <>
-                {/*<h1>{meme.name}</h1>*/}
                 <div className='imgContainer' >
                     <img src={meme.url}/>
                     <p className='memeText' style={textStyle}>{this.state.text}</p>
@@ -53,29 +52,26 @@ class App extends Component {
         this.setState({color: color});
     }
 
-renderColorButtons=()=>{
-    
-    if(this.state.color==='black'){
-        return(
-        <>
-            <button className='selected blackButton' onClick={()=>this.handleColorChange("black")}></button>
-            <button className='whiteButton' onClick={()=>this.handleColorChange("white")}></button>
-        </>
-        )
-    } else{
-        return(
-            <>
+    renderColorButtons=()=>{
+        
+        if(this.state.color==='black'){
+            return(
+                <>
+                <button className='selected blackButton' onClick={()=>this.handleColorChange("black")}></button>
+                <button className='whiteButton' onClick={()=>this.handleColorChange("white")}></button>
+                </>
+            )
+        } else{
+            return(
+                <>
                 <button className='blackButton' onClick={()=>this.handleColorChange("black")}></button>
                 <button onClick={()=>this.handleColorChange("white")} className='selected whiteButton'></button>
-            </>
+                </>
             )
+        }
     }
-    
-    
-}
 
   render(){
-
     return(
         <div className="container memePageContainer">
             <section>
@@ -93,6 +89,7 @@ renderColorButtons=()=>{
         </div>
     )
   }
+
 }
 
 export default App
