@@ -18,6 +18,9 @@ class App extends Component {
           <Route path={'/memes/:id'} render={(props)=> <MemePage {...props}/>}/>
         </Switch>
       </main>
+      <footer>
+        
+      </footer>
       </>
     )
   }
